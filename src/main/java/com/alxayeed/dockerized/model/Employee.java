@@ -1,4 +1,4 @@
-package com.alxayeed.dockerized.Entity;
+package com.alxayeed.dockerized.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
