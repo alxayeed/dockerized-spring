@@ -10,8 +10,8 @@ services:
       - db
     environment:
       - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/docker-spring
-      - SPRING_DATASOURCE_USERNAME=docker
-      - SPRING_DATASOURCE_PASSWORD=docker
+      - SPRING_DATASOURCE_USERNAME=root
+      - SPRING_DATASOURCE_PASSWORD=root
       - SPRING_JPA_HIBERNATE_DDL_AUTO=update
     expose:
       - 8080
@@ -21,6 +21,6 @@ services:
     image: 'postgres:latest'
     container_name: docker-spring-db
     environment:
-      - POSTGRES_USER=docker
-      - POSTGRES_PASSWORD=docker
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=root
       - POSTGRES_DB=docker-spring
