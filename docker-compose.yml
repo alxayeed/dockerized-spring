@@ -9,10 +9,17 @@ services:
     depends_on:
       - db
     environment:
-      - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/docker-spring
-      - SPRING_DATASOURCE_USERNAME=root
-      - SPRING_DATASOURCE_PASSWORD=root
-      - SPRING_JPA_HIBERNATE_DDL_AUTO=update
+#     These env variables are used in application.properties
+      - POSTGRES_DB=docker-spring
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=root
+      - POSTGRES_HOST=db
+      - POSTGRES_PORT=5432
+#      using following variables will be directly used by ignoring application.properties
+#      - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/docker-spring
+#      - SPRING_DATASOURCE_USERNAME=root
+#      - SPRING_DATASOURCE_PASSWORD=root
+#      - SPRING_JPA_HIBERNATE_DDL_AUTO=update
     expose:
       - 8080
     ports:
