@@ -24,7 +24,7 @@ This main branch on the otherhand, focuses on a little bit complicated one. The 
 
 
 1. Download or clone this branch of the project and go to root directory
-2. run ``` ./mvnw clean package``` to generate package file
+2. run ``` mvn package -B -DskipTests``` to generate package file
 3. Run a postgres server instance with appropriate database configuration according to the ```application.properties``` file.
 4. Build image for the springboot app - ```docker build -t <name-of-the-image> . (eg docker build -t springboot-docker .)``` **Don't forget the dot(.)!** 
 5. Run a container from this image - ```docker run -it -p 8080:8080 <name-of-the-image> (eg docker run -it -p 8080:8080 springboot-docker)```
