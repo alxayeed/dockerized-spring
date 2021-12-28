@@ -23,7 +23,7 @@ This main branch on the otherhand, focuses on a little bit complicated one. The 
 
 
 1. Download or clone this branch of the project and go to root directory
-2. type ```./mvnw clean package``` and hit enter to generate package file
+2. type ```mvn package -B -DskipTests``` and hit enter to generate package file
 3. give ```docker-compose up``` command to spin up the application. This will build image for the springboot app, run a postgres container, then run a container from the new image just generated.
 4. go to ```http://localhost:8080/swagger-ui.html#/``` , you will see a swagger page powered by the app running inside container
 
