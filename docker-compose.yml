@@ -27,7 +27,15 @@ services:
   db:
     image: 'postgres:latest'
     container_name: docker-spring-db
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    expose:
+      - 5432
+    ports:
+      - 5432:5432
     environment:
       - POSTGRES_USER=root
       - POSTGRES_PASSWORD=root
       - POSTGRES_DB=docker-spring
+volumes:
+  pgdata:
