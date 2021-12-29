@@ -26,7 +26,7 @@ services:
     ports:
       - 8080:8080
     volumes:
-      - /mnt/WORKSHOP/Project/Practice Projects/docker/dockerized/logs/:/var/tmp
+      - /mnt/WORKSHOP/Project/Practice Projects/docker/dockerized/logs/:/var/tmp/
   db:
     image: 'postgres:latest'
     container_name: docker-spring-db
