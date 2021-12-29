@@ -15,6 +15,7 @@ services:
       - POSTGRES_PASSWORD=root
       - POSTGRES_HOST=db
       - POSTGRES_PORT=5432
+      - LOG_FILE_PATH=var/tmp/logs/logs.log
 #      using following variables will be directly used by ignoring application.properties
 #      - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/docker-spring
 #      - SPRING_DATASOURCE_USERNAME=root
@@ -24,6 +25,8 @@ services:
       - 8080
     ports:
       - 8080:8080
+    volumes:
+      - /mnt/WORKSHOP/Project/Practice Projects/docker/dockerized/logs/:/var/tmp
   db:
     image: 'postgres:latest'
     container_name: docker-spring-db
